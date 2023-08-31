@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>HTML | DOM Object Object</title>
+    </head>
+    <body>
+        <center>
+            <object
+                id="myobject"
+                width="400"
+                data="https://media.geeksforgeeks.org/wp-content/uploads/geek-8.png"
+            ></object>
+
+            <p>
+                Click the button to get the URL of the embedded file.
+            </p>
+
+            <button onclick="Geeks()">Click it</button>
+
+            <p id="gfg"></p>
+        </center>
+        <script>
+            function Geeks() {
+                // Accessing Object element.
+                var x = document.getElementById('myobject').data;
+
+                document.getElementById('gfg').innerHTML = x;
+            }
+        </script>
+    </body>
+</html>
