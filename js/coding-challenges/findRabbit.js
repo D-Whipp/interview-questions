@@ -10,7 +10,7 @@
 const holes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 let rabbit = localStorage.getItem('rabbit');
 let look = 0;
-console.log('Rabbit: ', rabbit);
+console.log('The rabbit is currently at hole number: ', rabbit);
 
 const generateRabbit = () => {
     if (localStorage.getItem('rabbit')) {
