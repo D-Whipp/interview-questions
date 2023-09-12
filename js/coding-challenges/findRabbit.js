@@ -23,6 +23,28 @@ const generateRabbit = () => {
     }
 };
 
+const moveRabbit = (rabbit) => {
+    let elusiveMove = Math.floor(Math.random() * 2);
+    console.log(elusiveMove);
+    console.log(rabbit);
+
+    if (elusiveMove === 0) {
+        if (parseInt(rabbit) < 1) {
+            return;
+        }
+        rabbit = parseFloat(rabbit) - 1;
+        localStorage.setItem('rabbit', rabbit);
+        console.log(rabbit);
+    } else if (elusiveMove === 1) {
+        if (parseInt(rabbit) > 8) {
+            return;
+        }
+        rabbit = parseFloat(rabbit) + 1;
+        localStorage.setItem('rabbit', rabbit);
+        console.log(rabbit);
+    }
+};
+
 const looking = (holes, rabbit) => {
     console.log('holes: ', typeof holes.length);
     console.log('rabbit: ', typeof parseInt(rabbit));
@@ -36,3 +58,4 @@ const looking = (holes, rabbit) => {
 
 generateRabbit();
 looking(holes, rabbit);
+moveRabbit(rabbit);
