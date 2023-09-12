@@ -7,8 +7,10 @@
 // Find the rabbit
 // let rabbitHole ;
 
+const holes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 let rabbit = localStorage.getItem('rabbit');
-console.log(rabbit);
+let look = 0;
+console.log('Rabbit: ', rabbit);
 
 const generateRabbit = () => {
     if (localStorage.getItem('rabbit')) {
@@ -21,34 +23,16 @@ const generateRabbit = () => {
     }
 };
 
+const looking = (holes, rabbit) => {
+    console.log('holes: ', typeof holes.length);
+    console.log('rabbit: ', typeof parseInt(rabbit));
+
+    for (let i = 0; i < holes.length; i++) {
+        if (parseInt(i) === parseInt(rabbit)) {
+            console.log('Found the rabbit at: ' + rabbit);
+        }
+    }
+};
+
 generateRabbit();
-
-// if (localStorage.getItem('rabbit')) {
-//     let rabbit = Math.floor(Math.random() * 10);
-//     localStorage.setItem('rabbit', rabbit);
-//     console.log(rabbit);
-// } else {
-//     console.log('there');
-// }
-
-// const generateRabbitNumber = () => {
-//     let rabbit = Math.floor(Math.random() * 10);
-//     return (rabbitHole = rabbit);
-// let rabbit = false;
-// if (rabbit === false) {
-//     rabbit = Math.floor(Math.random() * 10);
-// } else {
-//     return rabbit;
-// }
-// let rabbitHole = Math.floor(Math.random() * 10);
-// if (rabbit !== undefined) {
-//     return;
-// }
-// rabbitHole = Math.floor(Math.random() * 10);
-// console.log(rabbitHole);
-// console.log(rabbit);
-// };
-
-// generateRabbitNumber();
-
-// console.log(rabbitHole);
+looking(holes, rabbit);
