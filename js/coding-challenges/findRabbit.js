@@ -10,6 +10,7 @@
 const holes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 let rabbit = localStorage.getItem('rabbit');
 let look = 0;
+let found = true;
 
 const generateRabbit = () => {
     if (localStorage.getItem('rabbit')) {
@@ -38,19 +39,24 @@ const moveRabbit = (rabbit) => {
     }
 };
 
-const looking = (holes, rabbit) => {
+const looking = (holes, rabbit, found) => {
     console.log('holes: ', typeof holes.length);
     console.log('rabbit: ', typeof parseInt(rabbit));
 
-    for (let i = 0; i < holes.length; i++) {
-        console.log('Looking in hole: ', i);
+    while (found) {
         moveRabbit(rabbit);
-        if (parseInt(i) === parseInt(rabbit)) {
-            console.log('Found the rabbit at: ' + rabbit);
-            return;
+        console.log(rabbit);
+        moveRabbit(rabbit);
+        for (let i = 0; i < holes.length; i++) {
+            console.log('Looking in hole: ', i);
+            if (parseInt(i) === parseInt(rabbit)) {
+                console.log('Found the rabbit at: ' + rabbit);
+                found = false;
+                return;
+            }
         }
     }
 };
 
 generateRabbit();
-looking(holes, rabbit);
+looking(holes, rabbit, found);
