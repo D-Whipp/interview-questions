@@ -41,3 +41,7 @@ const Rectangle3 = class Rectangle4 {
         this.width = width;
     }
 };
+
+
+let x = 'hello world';
+console.log(typeof x)
