@@ -279,22 +279,37 @@ Some advantages of HTML5 are:-
 
 ## Inline and block elements in HTML5?
 
--   Inline Block
+### Block
 
--   Inline elements just take up the space that is absolutely necessary for the content and does not start from a new line.
-    Example:- <span>, <a>, <strong>, <img>, <button>, <em>, <select>, <abbr>, <label>, <sub>, <cite>, <abbr>, <script>, <label>, <i>, <input>, <output>, <q>, etc. Block elements start on a new line and consume the full width of the page available.
-    Example:- <div>, <p>, <header>, <footer>, <h1>...<h6>, <form>, <table>, <canvas>, <video>, <blockquote>, <pre>, <ul>, <ol>, <figcaption>, <figure>, <hr>, <article>, <section>, etc.
+-   Always starts a new line.
+-   Takes up full width of the page
+-   Browsers add margin before and afer the element.
+-   Examples:
+<address><article><aside><blockquote><canvas><dd><div><dl><dt><fieldset><figcaption><figure><footer><form><h1>-<h6><header><hr><li><main><nav><noscript><ol><p><pre><section><table><tfoot><ul><video>
 
-34. What is the difference between <figure> tag and <img> tag?
-    The <figure> tag specifies the self-contained content, like diagrams, images, code snippets, etc. <figure> tag is used to semantically organize the contents of an image like image, image caption, etc., whereas the <img> tag is used to embed the picture in the HTML5 document.
+### Inline
 
-35. How to specify the metadata in HTML5?
+-   Does not start on a new line.
+-   Only takes up as much width as necessary.
+-   Examples:
+    <a><abbr><acronym><b><bdo><big><br><button><cite><code><dfn><em><i><img><input><kbd><label><map><object><output><q><samp><script><select><small><span><strong><sub><sup><textarea><time><tt><var>
+
+## What is the difference between <figure> tag and <img> tag?
+
+    - <figure> tag specifies the self-contained content, like diagrams, images, code snippets, etc.
+    - <figure> tag is used to semantically organize the contents of an image like image, image caption, etc
+    - <img> tag is used to embed the picture in the HTML5 document.
+
+## How to specify the metadata in HTML5?
+
     To specify we can use <meta> tag which is a void tag,i.e., it does not have a closing tag. Some of the attributes used with meta tags are name, content, http-equiv, etc. The below image tells how to specify the metadata.
 
-36. Is the <datalist> tag and <select> tag same?
+## Is the <datalist> tag and <select> tag same?
+
     No. The <datalist> tag and <select> tag are different. In the case of <select> tag a user will have to choose from a list of options, whereas <datalist> when used along with the <input> tag provides a suggestion that the user selects one of the options given or can enter some entirely different value.
 
-37. Define Image Map?
+## Define Image Map?
+
     Image Map lets a developer map/link different parts of images with the different web pages. It can be achieved by the <map> tag in HTML5, using which we can link images with clickable areas.
 
 <img src=”image_url” , usemap=”#workspace” />
@@ -304,85 +319,71 @@ Some advantages of HTML5 are:-
 </map> 38. What are Semantic Elements?
 Semantic elements are those which describe the particular meaning to the browser and the developer. Elements like <form>, <table>, <article>, <figure>, etc., are semantic elements.
 
-39. Convert the below data into Tabular format in HTML5?
-    S.no., Language, Mostly used for
+## Is drag and drop possible using HTML5 and how?
 
-1, HTML, FrontEnd
-
-2, CSS, FrontEnd
-
-3, Python, BackEnd
-
-40. What is the difference between <meter> tag and <progress> tag?
-    <progress> tag should be used when we want to show the completion progress of a task, whereas if we just want a scalar measurement within a known range or fraction value. Also, we can specify multiple extra attributes for <meter> tags like ‘form’, ‘low’, ‘high’, ‘min’, etc.
-
-41. Is drag and drop possible using HTML5 and how?
     Yes, in HTML5 we can drag and drop an element. This can be achieved using the drag and drop-related events to be used with the element which we want to drag and drop.
 
-42. Difference between SVG and Canvas HTML5 element?
-    SVG Canvas
-    SVG is a vector based i.e., composed of shapes. It is Raster based i.e., composed of pixels.
-    SVG works better with a larger surface. Canvas works better with a smaller surface.
-    SVG can be modified using CSS and scripts. Canvas can only be modified using scripts.
-    SVG is highly scalable. So we can print at high quality with high resolution. It is less scalable.
-43. What type of audio files can be played using HTML5?
-    HTML5 supports the following three types of audio file formats:
+### Why do you think the addition of drag-and-drop functionality in HTML5 is important? How will you make an image draggable in HTML5?
 
-Mp3
-WAV
-Ogg 44. What are the significant goals of the HTML5 specification?
-These were the target area of the HTML5 specs:
+    The drag and drop functionality is a very intuitive way to select local files. This is similar to what most of the OS have copy functionality thus making it very easy for the user to comprehend. Before the native drag and drop API, this was achievable by writing complex Javascript programming or external frameworks like jQuery.
 
-Introduction of new element tags to better structure the web page such as <header> tag.
-Forming a standard in cross-browser behavior and support for different devices and platforms
-Backward compatible with the older version HTML web pages
-Introduction of basic interactive elements without the dependency of plugins such as <video> tag instead of the flash plugin. 45. Explain the concept of web storage in HTML5.
+To enable this functionality there is a draggable attribute in the <img> tag and need to set ondrop and ondragover attribute to an eventhandler available in scripts.
+
+<!DOCTYPE HTML>
+<html>
+ <head>
+   <script>
+     function allowDrop(ev) {
+       ev.preventDefault();
+     }
+     function drop(ev) {
+       ...
+     }
+   </script>
+ </head>
+ <body>
+   ...
+   <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="border: 1px solid #aaaaaa; width:350px; height: 70px;"></div>
+   <br>
+   <img id="drag1" src="img_logo.gif" draggable="true" width="336" height="69">
+    ...
+ </body>
+</html>
+
+## Difference between SVG and Canvas HTML5 element?
+
+-   SVG gives better performance with smaller number of objects or larger surface
+-   SVG can be modified through script and CSS
+-   Canvas gives better performance with smaller surface or larger number of objects
+-   Canvas can be modified through script only
+
+## What type of audio files can be played using HTML5?
+
+-   Mp3
+-   WAV
+
+## What are the significant goals of the HTML5 specification?
+
+-   Introduction of new element tags to better structure the web page such as <header> tag.
+-   Forming a standard in cross-browser behavior and support for different devices and platforms
+-   Backward compatible with the older version HTML web pages
+-   Introduction of basic interactive elements without the dependency of plugins such as <video> tag instead of the flash plugin.
+
+## Explain the concept of web storage in HTML5
+
 This web storage helps in storing some of the static data in the local storage of the browser so that we do not need to fetch it from the server every time we need it. There is a size limit based on different browsers. This helps in decreasing the load time and a smooth user experience. There are two types of web storage that are used to store data locally in HTML5:
 
-Local Storage - This helps in storing data that will be retained even though the user reopens the browser. It is stored for each webapp on different browsers.
-Session Storage - This is used for one session only. After the user closes the browser this gets deleted. 46. What is Microdata in HTML5?
-It is used to help extract data for site crawlers and search engines. It is basically a group of name-value pairs. The groups are called items, and each name-value pair is a property. Most of the search engines like Google, Microsoft, Yandex, etc follow schema.org vocabulary to extract this microdata.
+-   Local Storage - This helps in storing data that will be retained even though the user reopens the browser. It is stored for each webapp on different browsers.
+-   Session Storage - This is used for one session only. After the user closes the browser this gets deleted. 46. What is Microdata in HTML5?
+    It is used to help extract data for site crawlers and search engines. It is basically a group of name-value pairs. The groups are called items, and each name-value pair is a property. Most of the search engines like Google, Microsoft, Yandex, etc follow schema.org vocabulary to extract this microdata.
 
-<div itemscope itemtype="http://schema.org/SoftwareApplication">
- <span itemprop="name">Interviewbit Games</span> -
- REQUIRES <span itemprop="operatingSystem">ANDROID</span><br>
- <link itemprop="applicationCategory" href="http://schema.org/GameApplication"/>
- <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-RATING:
-<span itemprop="ratingValue">4.6</span> (
-<span itemprop="ratingCount">8864</span> ratings )
- </div>
- <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-Price: Rs.<span itemprop="price">1.00</span>
-<meta itemprop="priceCurrency" content="INR" />
- </div>
-</div>
-itemid – The unique, global identifier of an item.
-itemprop – Used to add properties to an item.
-itemref – Provides a list of element ids with additional properties.
-itemscope – It defines the scope of the itemtype associated with it.
-itemtype – Specifies the URL of the vocabulary that will be used to define itemprop.
-The above example will be parsed by Google as
+## What is new about the relationship between the <header> and <h1> tags in HTML5?
 
-47. Which tag is used for representing the result of a calculation? Explain its attributes.
-    The <output> tag is used for representing the result of a calculation. It has the following attributes:
-
-for - It defines the relationship between the elements used in calculation and result.
-form - This is used to define the form the output element belongs to.
-name - The name of the output element.
-
-<form oninput = "result.value=parseInt(n1.value)+parseInt(n2.value)">
-     <input type = "number" name = "n1" value = "1" /> +
-     <input type = "number" name = "n2" value = "2" /><br />
-     The output is: <output name = "result"></output>
-</form>
-The above example looks like
-
-48. What is new about the relationship between the <header> and <h1> tags in HTML5?
     As HTML5 was all about better semantics and arrangements of the tags and elements, the <header> tag specifies the header section of the webpage. Unlike in previous version there was one <h1> element for the entire webpage, now this is the header for one section such as <article> or <section>. According to the HTML5 specification, each <header> element must at least have one <h1> tag.
 
-49. Explain HTML5 Graphics.
-    HTML5 supports two kinds of graphics:
+## Explain HTML5 Graphics.
+
+HTML5 supports two kinds of graphics:
 
 Canvas - It is like drawing on a whitepaper or a blank webpage. We can add different graphic designs on web pages with available methods for drawing various geometrical shapes.
 
@@ -405,8 +406,9 @@ SVG - Scalable Vector Graphics are used mostly for diagrams or icons. It follows
 </html>
 Both of the above examples produce this output and represent two different approaches provided by HTML5 to implement graphical aspects in the webpage.
 
-50. Explain new input types provided by HTML5 for forms?
-    Following are the significant new data types offered by HTML5:
+## Explain new input types provided by HTML5 for forms?
+
+Following are the significant new data types offered by HTML5:
 
 Date - Only select date by using type = "date"
 Week - Pick a week by using type = "week"
@@ -466,7 +468,7 @@ Url - Accepts a web address using type = "url”
         </div>  
     </form>
 
-    51. What are the New tags in Media Elements in HTML5?
+## What are the New tags in Media Elements in HTML5?
 
 <audio> - Used for sounds, audio streams, or music, embed audio content without any additional plug-in.
 <video> - Used for video streams, embed video content etc.
@@ -494,69 +496,8 @@ Url - Accepts a web address using type = "url”
         <source src="audio.mp3" type="audio/mpeg">
     </audio>
 
-52. Why do you think the addition of drag-and-drop functionality in HTML5 is important? How will you make an image draggable in HTML5?
-    The drag and drop functionality is a very intuitive way to select local files. This is similar to what most of the OS have copy functionality thus making it very easy for the user to comprehend. Before the native drag and drop API, this was achievable by writing complex Javascript programming or external frameworks like jQuery.
+## What are Web Workers?
 
-To enable this functionality there is a draggable attribute in the <img> tag and need to set ondrop and ondragover attribute to an eventhandler available in scripts.
-
-<!DOCTYPE HTML>
-<html>
- <head>
-   <script>
-     function allowDrop(ev) {
-       ev.preventDefault();
-     }
-     function drop(ev) {
-       ...
-     }
-   </script>
- </head>
- <body>
-   ...
-   <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="border: 1px solid #aaaaaa; width:350px; height: 70px;"></div>
-   <br>
-   <img id="drag1" src="img_logo.gif" draggable="true" width="336" height="69">
-    ...
- </body>
-</html>
-53. Why do we need the MathML element in HTML5?
-MathML stands for Mathematical Markup Language. It is used for displaying mathematical expressions on web pages. For this <math> tag is used.
-
-<!DOCTYPE HTML>
-<html>
- <head>
- </head>
- <body>
-<math>
-  <mrow>
-    <mrow>
-      <msup>
-        <mi> a </mi>
-        <mn> 2 </mn>
-      </msup>
-      <mo> + </mo>
-      <msup>
-        <mi> b </mi>
-        <mn> 2 </mn>
-      </msup>
-      <mo> + </mo>
-      <mn> 2 </mn>
-      <mn> a </mn>
-      <mn> b </mn>
-    </mrow>
-    <mo> = </mo>
-    <mn> 0 </mn>
-  </mrow>
-</math>
- </body>
-</html>
-This displays the equation a2 + b2 + 2ab = 0.
-
-54. What are the server-sent events in HTML5?
-    The events pushed from the webserver to the browsers are called server-sent events. DOM elements can be continuously updated using these events. This has a major advantage over straight-up polling. In polling, there is a lot of overhead since every time it is establishing an HTTP connection and tearing it down whereas, in server-sent events, there is one long-lived HTTP connection. To use a server-sent event, <eventsource> element is used. The src attribute of this element specifies the URL from which sends a data stream having the events.
-
-<eventsource src = "/cgi-bin/myfile.cgi" />
-55. What are Web Workers?
 These are added to bring parallelism and async capability. It runs in the background to do the computationally expensive tasks without yielding to make the page responsive. It is achieved by starting a separate thread for such tasks. These are not meant to perform UI operations. There are three types of web workers:
 
 Dedicated Workers - These are workers that are utilized by a single script.
@@ -584,25 +525,22 @@ function stopWorker() {
 }
 </script>
 
-56. What is the usage of a novalidate attribute for the form tag that is introduced in HTML5?
-    Its value is a boolean type that indicates whether or not the data being submitted by the form will be validated beforehand. By making this false, forms can be submitted without validation which helps users to resume later also.
+## What are raster images and vector images?
 
-<form action = "" method = "get" novalidate>
-        Name:<br><input type="name" name="sname"><br>
-       Doubt:<br><input type="number" name="doubt"><br>
-        <input type="submit" value="Submit">
-</form>
-57. What are raster images and vector images?
 Raster Images - The raster image is defined by the arrangement of pixels in a grid with exactly what color the pixel should be. Few raster file formats include PNG(.png), JPEG(.jpg), etc.
 Vector Images - The vector image is defined using algorithms with shape and path definitions that can be used to render the image on-screen written in a similar markup fashion. The file extension is .svg
 
-58. How to support SVG in old browsers?
-    To support old browsers instead of defining the resource of svg in src attribute of <img> tag, it should be defined in srcset attribute and in src the fallback png file should be defined.
+## How to support SVG in old browsers?
+
+To support old browsers instead of defining the resource of svg in src attribute of <img> tag, it should be defined in srcset attribute and in src the fallback png file should be defined.
 
 <img src="circle.png" alt="circle" srcset="circle.svg">
-59. What are different approaches to make an image responsive?
+
+## What are different approaches to make an image responsive?
+
 Art direction - Using <picture> element the landscape image fully shown in desktop layout can be zoomed in with the main subject in focus for a portrait layout.
 <picture>
+
  <source media="(min-width: 650px)" srcset="img_cup.jpg">
  <img src="img_marsh.jpg" style="width:auto;">
 </picture>
