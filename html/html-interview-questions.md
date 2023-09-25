@@ -2,7 +2,12 @@
 
 ## Are the HTML tags and elements the same thing?
 
-No. HTML elements are defined by a starting tag, may contain some content and a closing tag.For example, <h1>Heading 1</h1> is a HTML element but just <h1> is a starting tag and </h1> is a closing tag.
+No.
+
+-   HTML elements are defined by a starting tag, may contain some content and a closing tag.For example, <h1>Heading 1</h1> is a HTML element but
+-   Just <h1> is a starting tag
+-   and
+-   </h1> is a closing tag.
 
 ## What are tags and attributes in HTML?
 
@@ -14,13 +19,20 @@ HTML elements which do not have closing tags or do not need to be closed are Voi
 
 ## What is the advantage of collapsing white space?
 
-In HTML, a blank sequence of whitespace characters is treated as a single space character, Because the browser collapses multiple spaces into a single space character and this helps a developer to indent lines of text without worrying about multiple spaces and maintain readability and understandability of HTML codes.
+In HTML, a blank sequence of whitespace characters is treated as a single space character, Because the browser collapses multiple spaces into a single space character; a developer to indent lines of text without worrying about multiple spaces and maintain readability and understandability of HTML codes.
 
 ## What are HTML Entities?
 
-In HTML some characters are reserved like ‘<’, ‘>’, ‘/’, etc. To use these characters in our webpage we need to use the character entities called HTML Entities. Below are a few mapping between the reserved character and its respective entity character to be used.
+In HTML some characters are reserved like ‘<’, ‘>’, ‘/’, etc. To use these characters in our webpage we need to use the character entities called HTML Entities.
+A browser may confuse a less than symbol (<) with a tag so we use HTML Entities to display the less than symbol without causing confusion.
+Examples: &lt; or &#60;
 
 ## What are different types of lists in HTML?
+
+There are ordered and unordered lists.
+
+-   ordered provides numbering with the list items and is written with <ol></ol>
+-   unordered provides bullet points with the list items and is written with <ul></ul>
 
 ## What is the ‘class’ attribute in HTML?
 
@@ -32,9 +44,9 @@ Multiple elements in HTML can have the same class value, whereas a value of id a
 
 ## Define multipart form data?
 
-Multipart form data is one of the values of the enctype attribute. It is used to send the file data to the server-side for processing. The other valid values of the enctype attribute are text/plain and application/x-www-form-urlencoded.
+Multipart form data is one of the values of the enctype attribute. It's necessary if the user will upload a file through the form. It is used to send the file data to the server-side for processing. The other valid values of the enctype attribute are text/plain and application/x-www-form-urlencoded.
 
-## Describe HTML layout structure.
+## Describe HTML layout structure
 
 Every web page has different components to display the intended content and a specific UI. But still, there are few things which are templated and are globally accepted way to structure the web page, such as:
 
@@ -44,7 +56,9 @@ Every web page has different components to display the intended content and a sp
 <article>: It is a set of information.
 <section>: It is used inside the article block to define the basic structure of a page.
 <aside>: Sidebar content of the page.
-11. How to optimize website assets loading?
+
+## How to optimize website assets loading?
+
 To optimize website load time we need to optimize its asset loading and for that:
 
 CDN hosting - A CDN or content delivery network is geographically distributed servers to help reduce latency.
@@ -53,7 +67,8 @@ File concatenation - This reduces the number of HTTP calls
 Minify scripts - This reduces the overall file size of js and CSS files
 Parallel downloads - Hosting assets in multiple subdomains can help to bypass the download limit of 6 assets per domain of all modern browsers. This can be configured but most general users never modify these settings.
 Lazy Loading - Instead of loading all the assets at once, the non-critical assets can be loaded on a need basis. 12. What are the various formatting tags in HTML?
-HTML has various formatting tags:
+
+## HTML has various formatting tags
 
 <b> - makes text bold
 <i> - makes text italic
@@ -71,9 +86,17 @@ HTML has various formatting tags:
 
 The three kinds of Doctypes which are available:
 
-Strict Doctype
-Transitional Doctype
-Frameset Doctype 14. Please explain how to indicate the character set being used by a document in HTML?
+Strict Doctype: does not allow presentational attributes to be written within HTML Elements.
+Transitional Doctype: derivative of HTML Strict doctype delclaration, allowing users to use certain elements and attributes which are not allowed to be used in STRICT doctype.
+Frameset Doctype: derivative of Transitional doctype declaration, allowing users to use frames.
+
+HTML Frames are used to divide your browser window into multiple sections where each section can load a separate HTML document.
+
+## Please explain how to indicate the character set being used by a document in HTML?
+
+The charset attribute specifies the character encoding for the HTML document.
+UTF-8 charset covers almost all of the characters and symbols in the world.
+
 The character set is defined in <meta> tag inside <head> element.
 
 <!DOCTYPE html>
@@ -85,8 +108,10 @@ The character set is defined in <meta> tag inside <head> element.
  </head>
  ...
 </html>
-15. What is the difference between <strong>, <b> tags and <em>, <i> tags?
-The effect on a normal webpage of the tags <strong>, <b>  and <em>, <i> is the same. <b> and <i> tags stands for bold and italic. These two tags only apply font styling and bold tag <b>, just adds more ink to the text, these tags don't say anything about the text.
+
+## What is the difference between <strong>, <b> tags and <em>, <i> tags?
+
+The effect on a normal webpage of the tags <strong>, <b> and <em>, <i> is the same. <b> and <i> tags stands for bold and italic. These two tags only apply font styling and bold tag <b>, just adds more ink to the text, these tags don't say anything about the text.
 
 Whereas, <strong> and <em> tags represent that the span of text is of strong importance or more importance and emphatic stress respectively than the rest of the text. These tags have semantic meaning.
 
@@ -101,12 +126,16 @@ Whereas, <strong> and <em> tags represent that the span of text is of strong imp
 Yes, we can display a web page inside another HTML web page. HTML provides a tag <iframe> using which we can achieve this functionality.
 
 <iframe src=”url of the web page to embed” />
-18. How is Cell Padding different from Cell Spacing?
-Cell Spacing is the space or gap between two consecutive cells. Whereas, Cell Padding is the space or gap between the text/ content of the cell and the edge/ border of the cell. Please refer to the above figure example to find the difference.
+
+## How is Cell Padding different from Cell Spacing?
+
+Cell Spacing (similar to margin) is the space or gap between two consecutive cells. Whereas, Cell Padding is the space or gap between the text/ content of the cell and the edge/ border of the cell.
 
 ## How can we club two or more rows or columns into a single row or column in an HTML table?
 
 HTML provides two table attributes “rowspan” and “colspan” to make a cell span to multiple rows and columns respectively.
+
+Example: rowspan="2";
 
 ## Is it possible to change an inline element into a block level element?
 

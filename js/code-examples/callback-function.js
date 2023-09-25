@@ -15,6 +15,13 @@ const animals = ['dog', 'cat', 'chicken', 'duck'];
 
 animals.forEach((animal) => console.log(animal));
 
+// forEach with a written function
+const sampleFunction = (animal) => {
+    console.log(animal)
+}
+
+animals.forEach(sampleFunction)
+
 // Custom Example
 // This is taking a dissection of forEach
 // here we are defining a function that
