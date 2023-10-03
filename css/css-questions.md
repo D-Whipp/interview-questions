@@ -81,7 +81,13 @@ ul {
 
 <div class=”box”></div>
 
-//Child Combinator
+## Combinators combine other selectors in a way that gives them a useful relationship to each other and the location of content in the document.
+
+<!-- source https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators -->
+
+### Child Combinator
+
+It matches only those elements matched by the second selector that are the direct children of elements matched by the first.
 
 #container> .box {
 
@@ -103,25 +109,15 @@ ul {
 
 </div>
 
-// General Sibling Combinator
+### Subsequent-sibling combinator
 
-h2 ~ p {
+If you want to select siblings of an element even if they are not directly adjacent, then you can use the subsequent-sibling combinator (~). To select all <img> elements that come anywhere after <p> elements, we'd do this:
 
-    margin-bottom: 20px;
+p ~ img
 
-}
+### Attribute Selector
 
-<h2>Title</h2>
-
-<p>Paragraph example.</p>
-
-<div class=”box”>
-
-    <p>Paragraph example.</p>
-
-</div>
-
-//Attribute Selector
+These selectors enable the selection of an element based on the presence of an attribute alone (for example href), or on various different matches against the value of the attribute.
 
 input [type=”text”] {
 
@@ -223,10 +219,4 @@ p {
 
 ## Which Property is used to Underline, Strikethrough, and Overline Text?
 
-text-style
-
-Text-type
-
-text-decoration
-
-Text-transform
+text-decoration.

@@ -50,6 +50,7 @@ games.set('Square Enix', 'Final Fantasy');
 games.set('Bethesda', 'Elder Scrolls');
 games.set('Sucker Punch', 'Ghost of Tsushima');
 games.set('Nether Realms Studio', 'Mortal Kombat');
+// games.set('Bethesda', 'Testing') ==> This re-establishes Bethesda value as Testing and NOT Elder Scrolls
 
 console.log(games);
 console.log(games.get('Sucker Punch'));
