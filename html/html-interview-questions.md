@@ -87,8 +87,26 @@ Lazy Loading - Instead of loading all the assets at once, the non-critical asset
 The three kinds of Doctypes which are available:
 
 Strict Doctype: does not allow presentational attributes to be written within HTML Elements.
+
+Presentaional attributes: align, alink, bgcolor, color, face, height, link, size ...
+
 Transitional Doctype: derivative of HTML Strict doctype delclaration, allowing users to use certain elements and attributes which are not allowed to be used in STRICT doctype.
+
 Frameset Doctype: derivative of Transitional doctype declaration, allowing users to use frames.
+
+<frameset rows="10%,80%,10%">
+    <frame name="top" src="https://www.tutorialspoint.com/html/top_frame.htm" />
+    <frame name="main" src="https://www.tutorialspoint.com/html/main_frame.htm" />
+    <frame name="bottom" src="https://www.tutorialspoint.com/html/bottom_frame.htm" />
+
+    <noframes>
+
+        <body>Your browser does not support frames.</body>
+    </noframes>
+
+</frameset>
+
+frames appear to stack webpages, similar to iframes.
 
 HTML Frames are used to divide your browser window into multiple sections where each section can load a separate HTML document.
 
@@ -148,7 +166,10 @@ There are mainly 7 values of position attribute that can be used to position an 
 ### static
 
 Default value. Here the element is positioned according to the normal flow of the document.
-absolute: Here the element is positioned relative to its parent element. The final position is determined by the values of left, right, top, bottom.
+
+### absolute
+
+Here the element is positioned relative to its parent element. The final position is determined by the values of left, right, top, bottom.
 
 ### fixed
 
@@ -164,7 +185,13 @@ This resets the property to its default value.
 
 ### inherit
 
-Here the element inherits or takes the property of its parent. 22. In how many ways you can display HTML elements?
+Here the element inherits or takes the property of its parent.
+
+### sticky
+
+A sticky element toggles between relative and fixed, depedning on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place.
+
+## In how many ways you can display HTML elements?
 
 ### inline
 

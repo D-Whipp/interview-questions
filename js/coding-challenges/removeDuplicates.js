@@ -8,7 +8,7 @@ let duplicatesArray = [
 
 // Simple solutions: use Set
 let nodupes = [...new Set(duplicatesArray)];
-console.log(nodupes);
+console.log("No dupes: ", nodupes);
 // DONE!
 
 // Solution using  filter() and indexOf()
@@ -16,5 +16,5 @@ let result = duplicatesArray.filter((item, index) => {
     return duplicatesArray.indexOf(item) == index;
 });
 
-console.log(result);
+console.log("Result: ", result);
 // DONE!

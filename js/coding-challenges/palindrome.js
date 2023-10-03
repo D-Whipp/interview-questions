@@ -15,13 +15,13 @@ function isPalindrome(string) {
     let originalString = string;
     let reversedString = string.split('').reverse().join('');
 
-    console.log(originalString);
-    console.log(reversedString);
+    // console.log(originalString);
+    // console.log(reversedString);
 
     if (reversedString === originalString) {
         console.log(originalString + ' is a Palindrome');
     } else {
-        console.log(originalString + ' is not a Palindrome');
+        console.log(originalString + ' is NOT a Palindrome');
     }
 }
 
