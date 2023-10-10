@@ -4,12 +4,11 @@ JavaScript is used to add user interaction to an application. The following sect
 
 ## What are the various Data Types in JavaScript?
 
-JavaScript has many data types to provide the basic functionality needed for a web application. They are mentioned in this table.
-![Data Types Images](./images/JavaScript_DataTypes.png)
+![data types](./code-examples/DataTypes-image.png)
 
 ## What is Callback in JavaScript?
 
-![Calllback Image](./images/JavaScript_CallBack.png)
+![Calllback Image](./code-examples/CallBack-image.png)
 
 A callback is a JavaScript function that is sent as an argument or parameter to another function.
 You call this function whenever the function to which it is provided is called.
@@ -113,16 +112,6 @@ console.log(square(4)); // 16
 Here you import those functions and pass input to those functions to calculate square and diagonal.
 
 ## What is the difference between Undefined, Undeclared, and Null in JavaScript?
-
-var x
-
-console.log(x) //Undefined variable
-
-var y=NULL
-
-console.log(y) //Null Variable
-
-console.log(z) //Undeclared Variable
 
 Undefined - Undefined means a variable has been declared but a value has not yet been assigned to that variable.
 
