@@ -15,7 +15,7 @@ Tags are the primary component of the HTML that defines how the content will be 
 
 ## What are void elements in HTML?
 
-HTML elements which do not have closing tags or do not need to be closed are Void elements. For Example <br />, <img />, <hr />, etc.
+HTML elements which do not have closing tags or do not need to be closed are Void elements. For Example breaktag <br />, image tag <img />, horizontal rule tag <hr />, etc.
 
 ## What is the advantage of collapsing white space?
 
@@ -50,41 +50,41 @@ Multipart form data is one of the values of the enctype attribute. It's necessar
 
 Every web page has different components to display the intended content and a specific UI. But still, there are few things which are templated and are globally accepted way to structure the web page, such as:
 
-<header>: Stores the starting information about the web page.
-<footer>: Represents the last section of the page.
-<nav>: The navigation menu of the HTML page.
-<article>: It is a set of information.
-<section>: It is used inside the article block to define the basic structure of a page.
-<aside>: Sidebar content of the page.
+&lt;header&gt;: Stores the starting information about the web page.
+&lt;footer&gt;: Represents the last section of the page.
+&lt;nav&gt;: The navigation menu of the HTML page.
+&lt;article&gt;: It is a set of information.
+&lt;section&gt;: It is used inside the article block to define the basic structure of a page.
+&lt;aside&gt;: Sidebar content of the page.
 
 ## How to optimize website assets loading?
 
 To optimize website load time we need to optimize its asset loading and for that:
 
-CDN hosting - A CDN or content delivery network is geographically distributed servers to help reduce latency.
-File compression - This is a method that helps to reduce the size of an asset to reduce the data transfer
-File concatenation - This reduces the number of HTTP calls
-Minify scripts - This reduces the overall file size of js and CSS files
-Parallel downloads - Hosting assets in multiple subdomains can help to bypass the download limit of 6 assets per domain of all modern browsers. This can be configured but most general users never modify these settings.
-Lazy Loading - Instead of loading all the assets at once, the non-critical assets can be loaded on a need basis. 12. What are the various formatting tags in HTML?
+-   CDN hosting - A CDN or content delivery network is geographically distributed servers to help reduce latency.
+-   File compression - This is a method that helps to reduce the size of an asset to reduce the data transfer
+-   File concatenation - This reduces the number of HTTP calls
+-   Minify scripts - This reduces the overall file size of js and CSS files
+-   Parallel downloads - Hosting assets in multiple subdomains can help to bypass the download limit of 6 assets per domain of all modern browsers. This can be configured but most general users never modify these settings.
+-   Lazy Loading - Instead of loading all the assets at once, the non-critical assets can be loaded on a need basis. 12. What are the various formatting tags in HTML?
 
 ## HTML has various formatting tags
 
-<b> - makes text bold
-<i> - makes text italic
-<em> - makes text italic but with added semantics importance
-<big> - increases the font size of the text by one unit
-<small> - decreases the font size of the text by one unit
-<sub> - makes the text a subscript
-<sup> - makes the text a superscript
-<del> - displays as strike out text
-<strong> - marks the text as important
-<mark> - highlights the text
-<ins> - displays as added text
+&lt;b &gt; - makes text bold \
+&lt;i &gt; - makes text italic \
+&lt;em &gt; - makes text italic but with added semantics importance \
+&lt;big &gt; - increases the font size of the text by one unit \
+&lt;small&gt; - decreases the font size of the text by one unit \
+&lt;sub&gt; - makes the text a subscript \
+&lt;sup&gt; - makes the text a superscript \
+&lt;del&gt; - displays as strike out text \
+&lt;strong&gt; - marks the text as important \
+&lt;mark&gt; - highlights the text \
+&lt;ins&gt; - displays as added text
 
 ## What are the different kinds of Doctypes available?
 
-The three kinds of Doctypes which are available:
+The three kinds of Doctypes which are available Strict Doctype, Transitional Doctype, and Frameset Doctype.
 
 Strict Doctype: does not allow presentational attributes to be written within HTML Elements.
 
@@ -127,23 +127,23 @@ The character set is defined in <meta> tag inside <head> element.
  ...
 </html>
 
-## What is the difference between <strong>, <b> tags and <em>, <i> tags?
+## What is the difference between &lt;strong&gt;, &lt;b&gt; and &lt;em&gt;, &lt;i&gt;?
 
-The effect on a normal webpage of the tags <strong>, <b> and <em>, <i> is the same. <b> and <i> tags stands for bold and italic. These two tags only apply font styling and bold tag <b>, just adds more ink to the text, these tags don't say anything about the text.
+The effect on a normal webpage of the tags &lt;strong&gt;, &lt;b&gt; and &lt;em&gt;, &lt;i&gt; is the same. b and i tags stands for bold and italic. These two tags only apply font styling and bold tag b, just adds more ink to the text, these tags don't say anything about the text.
 
-Whereas, <strong> and <em> tags represent that the span of text is of strong importance or more importance and emphatic stress respectively than the rest of the text. These tags have semantic meaning.
+Whereas, strong and em tags represent that the span of text is of strong importance or more importance and emphatic stress respectively than the rest of the text. These tags have semantic meaning.
 
-## What is the significance of <head> and <body> tag in HTML?
+## What is the significance of head and body tag in HTML?
 
-<head> tag provides the information about the document. It should always be enclosed in the <html> tag. This tag contains the metadata about the webpage and the tags which are enclosed by head tag like <link>, <meta>, <style>, <script>, etc. are not displayed on the web page. Also, there can be only 1 <head> tag in the entire Html document and will always be before the <body> tag.
+&lt;head&gt; tag provides the information about the document. It should always be enclosed in the html tag. This tag contains the metadata about the webpage and the tags which are enclosed by head tag like link, meta, style, script, etc. are not displayed on the web page. Also, there can be only 1 head tag in the entire Html document and will always be before the body tag.
 
-<body> tag defines the body of the HTML document. It should always be enclosed in the <html> tag. All the contents which needs to be displayed on the web page like images, text, audio, video, contents, using elements like <p>, <img>, <audio>, <heading>, <video>, <div>, etc. will always be enclosed by the <body> tag. Also, there can be only 1 body element in an HTML document and will always be after the <head> tag.
+&lt;body&gt; tag defines the body of the HTML document. It should always be enclosed in the html tag. All the contents which needs to be displayed on the web page like images, text, audio, video, contents, using elements like p, img, audio, heading, video, div, etc. will always be enclosed by the body tag. Also, there can be only 1 body element in an HTML document and will always be after the head tag.
 
 ## Can we display a web page inside a web page or Is nesting of webpages possible?
 
-Yes, we can display a web page inside another HTML web page. HTML provides a tag <iframe> using which we can achieve this functionality.
+Yes, we can display a web page inside another HTML web page. HTML provides a tag iframe using which we can achieve this functionality.
 
-<iframe src=”url of the web page to embed” />
+&lt; iframe src=”url of the web page to embed” / &gt;
 
 ## How is Cell Padding different from Cell Spacing?
 
@@ -277,7 +277,7 @@ HTML provides a <script> tag using which we can run the javascript code and make
    </h1>
    <script>
        document.getElementById("demo").innerHTML = "script Tag"
-   </script>
+   </script,>
    </body>
 </html>
 
