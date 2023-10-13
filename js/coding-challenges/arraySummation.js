@@ -1,19 +1,23 @@
 let passArray = [1, 4, 5, 2];
 
-let bigNumber = 0;
 
 function aVeryBigSum(ar) {
+    let bigNumber = BigInt('0');
     let sumArray = ar;
     console.log(sumArray);
 
     for (let i = 0; i < sumArray.length; i++) {
-        bigNumber += sumArray[i];
+        // for (var num of ar) {
+        bigNumber += BigInt(sumArray[i]);
+        // bigNumber += BigInt(num);
         console.log(bigNumber);
     }
 
-    BigInt(bigNumber);
+    // BigInt(bigNumber);
     // bigNumber += 'n';
     console.log(typeof bigNumber);
+    console.log(bigNumber);
+    
     return bigNumber;
 }
 
