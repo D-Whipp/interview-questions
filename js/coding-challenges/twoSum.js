@@ -30,21 +30,30 @@
 // -109 <= target <= 109
 // Only one valid answer exists.
 
-let nums = [2, 7, 11, 15];
-const target = 9;
+let nums = [2, 5, 5, 11];
+const target = 10;
+
+// var twoSum = function (nums, target) {
+//     for (let i = 0; i <= nums.length; i++) {
+//         for (let j = 1; j <= nums.length + 1; j++) {
+//             console.log('i: ' + i + " j: " + j)
+
+//             if (nums[i] + nums[j] === target) {
+//                 console.log('i: ' + i + ' ' + 'j: ' + j);
+
+//                 console.log([i, j])
+//                 return([i, j])
+//             }
+//         }
+//     }
+// };
 
 var twoSum = function (nums, target) {
-    let results = [];
-
     for (let i = 0; i <= nums.length; i++) {
-        for (let j = 1; j <= nums.length + 1; j++) {
-            if (nums[i] + nums[j] === target) {
-                console.log('i: ' + i + ' ' + 'j: ' + j);
-            
-                console.log([i, j])
-                return([i, j])
-            } 
-        } 
+        if (nums[i] + nums[i + 1] === target) {
+            console.log([i, i + 1]);
+            return [i, i + 1];
+        }
     }
 };
 
